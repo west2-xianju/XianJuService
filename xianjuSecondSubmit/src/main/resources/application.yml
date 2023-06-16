@@ -1,0 +1,60 @@
+server:
+  port: 5002
+  servlet:
+    encoding:
+      charset: UTF-8
+
+redis:
+  # redis服务器地址（默认为localhost）
+  host: 121.40.105.104
+  # redis端口（默认为6379）
+  port: 6379
+  # redis连接池配置
+  pool:
+    # 最大可用连接数（默认为8，负数表示无限）
+    max-active: -1
+    # 最大空闲连接数（默认为8，负数表示无限）
+    max-idle: -1
+    # 最小空闲连接数（默认为0，该值只有为正数才有用）
+    min-idle: 0
+    # 从连接池中获取连接最大等待时间（默认为-1，单位为毫秒，负数表示无限）
+    max-wait: -1
+
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3336/xianju
+
+logging:
+  level:
+    com.xianju: debug
+
+  #  邮箱发送配置
+  mail:
+    host: smtp.163.com
+    username: yu742139017@163.com
+    password: yuzhenhan123
+    default-encoding: utf-8
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+
+
+alipay:
+  appId: 2021000122669896
+  appPrivateKey: MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCfWCcbkOjk7zVqeCMdstnevV6GltzYCZIb4DVnuFdYHhFsmxMZVh7bSGcoxRa+A+NmbSjLTe6Yb8WlK1Mf6wmUz1QWNm1WqANh98vpoCnCvHxDUSF0GmhWwyDY22CTupvkf9wYGOcqPzAmHbst72QtNayM1jsOvKy69RDqkvZVxBeUtZEHb+kIeBUa6Rr7dHxcWQMn10Iwh2fovi2z2b99EGZ+f5eaXe7PvthD+amJq/a19pwsLW2MixvQL8lfuivXlvKcFYdyYMGrj6tCKijHW/VKId0IBE4QsWbP+p0RoGDL7foQxwVremsj3xS8N+PuxqUGJrAxgmNkJ4l3qvRDAgMBAAECggEAZUiKKypz7rjh8hgE8iax97PU9qXEIIoM1i0wpQn2cutB1g/IFw23tViTQcXtC8C69WsjR/70Tu6U6cTdJGeogm86mpfj7fYDmG0CrzB/+ukF72ANbJgwhB2prk3bWGuAFcDz7Fk/7omVmFTDmpIU0evRDwBJL7fb70ZAh2n8rExhaMGkeuDFz5k2R0Z58IF4n234z/ZjI2hqmiCFmsWidLl1ePrNE1Q+1M8mOCysEehUk70w4ChJx7DJn3fQ7HBqb95yUcjvOLx0HWxiXGDxvnf1nmc6B/ybbEc3yCUkup8bgjn1JKTd099tw+TFWsdrs9KFAngezJ84G96CYV4YwQKBgQDsQWof5j3HSYyDf9e/YRJr5wSSfFyV5u7KSblRI5eMNfmCkccKVjkCGYqwfq3OdZ1QDKz+UloLeFPfkOC4QSAlORxoMRWal7Pb+dDo0w/QsEFXHw2kgDaaikmhal0G4zTe+i8MXzrx7kLGf0A3w/1ibUpwh2DzqaMdIbIdjewMIwKBgQCsqUGwCxhnIBdt70ezVEFNX1TrAEdYhTvuKnnzt7kZwOeRwGLY7YjnUmVft3awGY4Pp8uv2UP2KMZd1Jpmt7TrQ5aqymfn4ODL2PAHWapw+HVkMj1GlwQDFAj4rBEziVFk9ukVdonqizPosHpaBpLGnBASOORYXKUnFVQ6gsBpYQKBgE7KAfphbnjnrlSsbecFGH+jq4KutrHHMhuEOqk0lXXNCkjhFN/9oUVx/y6dEJmp36yyjX7DOARbPJ1yU38fOPkw8qhMtke4D+NsjJ8YxE10elXzpTkXCR7Av411S1DgtOEnzkjx+VZ1fw9zoJb4ZahNimW8wDiCekNc2WnBytbBAoGAew1prkBKFP0PFZ9p10md/LmLeKxLLLBPxO5q2aI/fjY4E20sRXQMlOfpLa1AHkMoNsocZWgPgnkO3sJtg/U7MEyMLY5xPRXMwBsM/gAOc9LvPwh7GTr5dgQqXKes3rDn3HAIL+66Xfj1dsmHeW+j3X5OCd6YBs2IOnF+BPE4liECgYBx6kkrXOuXez2p6Ah8Q0ljGHFp8SnLJ7dUXx9ipNDCiZYz2iNGUTq8SeXiBGLQUsteeyIwPv/wMwJZHY1LuSk1+NMc3fCQzP+o7YX0vvyLkTalcZ1RJJwUT3HMb42tPTrVlx/yZdv6RkMgVBeBbtTxHqeiu5BCleOGJbuZ79oRpw==
+  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkETQvM9JincqHHgeo9QW3j/YT2PZuiOb95bfRdngb+Rep8HHthAKB7e5vC8rosZCZGDuNy+vvIeuHGn7H597oZGdETONVtKBtIJ13lL0pppv29teQzY6Z9PfbV9wW4i9KiZoaxU4pZcVjhi6tqzF5BOAZzCvxf4sAjO2VB51AbPVrrbcomXJ9j0QNabQdQsTD/GaGhrx94o0HESPRBom5NLmCq6VC0D0jYZVVMuuJoCp+CnpCHKqN+Y2aEITt1E3TzjXFBC7/rrtJwDi3nu4Xv/WUUZ0/wwAroDjWou5qCYRXcD06dSWNpBDWJ29zRKWpgO8HkiyuRVrZS8nke40VQIDAQAB
+  notifyUrl: http://umvjfr.natappfree.cc/alipay/notify
+
+
+
+
+
+
+
