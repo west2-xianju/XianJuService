@@ -30,7 +30,7 @@
 
 ### 1.3 业务逻辑
 
-![](C:\Users\高毅飞\Desktop\output.png)
+![](images/output.png)
 
 ## *2. 项目使用到的技术栈*
 
@@ -258,7 +258,7 @@
 
 1. 支付宝接口在使用沙箱账号测试时没有问题能够正常跳转页面并且进行回调，但是在前后端联调时在配置和密钥正确的情况下移动端未能正确跳转，并出现类似图中的乱码问题
 
-![](C:\Users\高毅飞\Desktop\]~@N40JGZHK{OA@{HVU}HJR.png)
+![](images/]~@N40JGZHK{OA@{HVU}HJR.png)
 
 2. 多次使用mybatisplus中的LambdaQueryWrapper进行查询但是没有对其进行封装，导致代码冗余
 3. 虽然聊天服务器是另一位后端队友做的，但是我也有在自己项目上进行websocket的整合，目前整合上项目之后聊天模块的接口已经可以使用，但未能与前端进行联调
